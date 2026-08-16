@@ -1,0 +1,25 @@
+generated: '2026-08-16'
+method: searched
+source: https://fnality.com/sitemap.xml
+plan_count: 0
+plans: []
+note: >-
+  Fnality International publishes no plans, tiers or pricing of any kind. The full
+  page sitemap (https://fnality.com/sitemap.xml -> page-sitemap.xml, HTTP 200,
+  16 pages) contains no pricing, plans, packages or fees page, and /pricing and
+  /plans both return HTTP 404. This is expected for the business model rather
+  than an omission: Fnality is a regulated financial market infrastructure whose
+  payment systems are used by admitted participant banks under bilateral
+  participation and software-licensing agreements arranged through Fnality
+  Services (https://fnality.com/how-it-works/fnality-services), and whose 24
+  shareholder institutions are its counterparties. Commercial terms are set in
+  those agreements, not on a public price list. The only public commercial
+  channel is the contact form at https://fnality.com/contact-us.
+access_model:
+  type: participant-agreement
+  self_serve_signup: false
+  public_price_list: false
+  contact: https://fnality.com/contact-us
+evidence:
+- {url: 'https://fnality.com/sitemap.xml', status: 200, finding: 'no pricing/plans page in sitemap'}
+- {url: 'https://fnality.com/how-it-works/fnality-services', status: 200, finding: 'software licensing arranged via Fnality Services, no published fees'}

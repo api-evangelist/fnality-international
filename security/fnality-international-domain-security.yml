@@ -1,0 +1,44 @@
+generated: '2026-08-16'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml hosts + the docs host (docs.fnality.com)
+hosts:
+- host: fnality.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 18 09:03:03 2026 GMT
+  hsts: false
+- host: docs.fnality.com
+  https: true
+  tls_version: TLSv1.3
+  hsts: true
+  hsts_max_age: 31536000
+  hsts_include_subdomains: true
+  server: cloudflare
+  note: >-
+    Archbee-hosted documentation space (CNAME proxy.archbee.com). The space is
+    credential-gated — the root returns HTTP 200 carrying a "Get a magic link to
+    access space with your account" login shell rather than documentation.
+domains:
+- domain: fnality.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false
+  dmarc_note: >-
+    A syntactically valid DMARC policy (v=DMARC1; p=quarantine; pct=100;
+    ruf=mailto:itsupport@fnality.org) is published as a TXT record on the APEX
+    (fnality.com) instead of at _dmarc.fnality.com. RFC 7489 requires the record
+    at the _dmarc subdomain, so `dig +short TXT _dmarc.fnality.com` returns
+    nothing and receiving mail servers will not apply the policy. Recorded as
+    dmarc: false because the policy is not discoverable where DMARC is looked up.
+x-observations:
+- host: fnality.com
+  finding: no HSTS on the primary website host
+- host: fnality.com
+  finding: >-
+    TLS certificate expiry observed as 2026-08-18, two days after this probe —
+    short-lived certificate rotation, not a defect, but noted as observed.
+- domain: fnality.com
+  finding: no CAA records published
+- domain: fnality.com
+  finding: DNSSEC not enabled

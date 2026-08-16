@@ -1,0 +1,20 @@
+generated: '2026-08-16'
+method: searched
+source: https://docs.fnality.com/
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No published rate limits. Fnality operates no public API host — api.fnality.com,
+  developer.fnality.com and portal.fnality.com do not resolve — and its only
+  technical documentation space, https://docs.fnality.com/, is credential-gated
+  (HTTP 200 returning an Archbee "Get a magic link to access space with your
+  account" login shell, not documentation). There is therefore no public page on
+  which throttling, quotas, burst allowances or RateLimit-* / Retry-After
+  response headers are documented, and no unauthenticated endpoint on which they
+  could be observed. This is a recorded zero, not an assumption: any limits that
+  exist are stated in participant documentation behind that gate.
+evidence:
+- {url: 'https://docs.fnality.com/', status: 200, finding: 'credential-gated Archbee space, not documentation'}
+- {url: 'https://api.fnality.com/', status: 0, finding: 'host does not resolve (NXDOMAIN)'}
+- {url: 'https://fnality.com/openapi.json', status: 404, finding: 'no machine-readable spec on the website host'}

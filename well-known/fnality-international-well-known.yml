@@ -1,0 +1,46 @@
+generated: '2026-08-16'
+method: probed
+source: live HTTPS probes of every Fnality host reachable without credentials
+note: >-
+  Every /.well-known/ path returned HTTP 404 on both hosts. NO WellKnown or
+  SecurityTxt pointer is wired into apis.yml — this file records a measured
+  absence, not a served discovery surface. Fnality publishes no RFC 9116
+  security.txt, no OIDC/OAuth discovery document, no RFC 9727 api-catalog, and
+  no agent manifest at any well-known location.
+hosts:
+- host: https://fnality.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/mcp.json, status: 404}
+- host: https://docs.fnality.com
+  note: >-
+    Archbee-hosted, credential-gated documentation space. Its catch-all answers
+    HTTP 404 for unknown paths (the root itself answers 200 with a magic-link
+    login shell), so these 404s are genuine misses rather than an SPA 200
+    false positive.
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/mcp.json, status: 404}
+hosts_not_resolving:
+- api.fnality.com
+- developer.fnality.com
+- portal.fnality.com
+- status.fnality.com
+summary:
+  hosts_probed: 2
+  paths_probed: 18
+  documents_found: 0
