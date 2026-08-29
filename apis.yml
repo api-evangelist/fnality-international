@@ -13,6 +13,17 @@ description: 'Fnality International is a London-headquartered financial market i
   and runs inter-system arrangements. Technical documentation for participants is hosted
   in a credential-gated Archbee space at docs.fnality.com; Fnality publishes no public
   developer portal, API reference or machine-readable specification.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://fnality.com/wp-content/uploads/2024/06/logo.svg
 url: https://raw.githubusercontent.com/api-evangelist/fnality-international/refs/heads/main/apis.yml
 x-type: company
