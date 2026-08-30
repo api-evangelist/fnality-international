@@ -2,11 +2,11 @@
   "repo": "fnality-international",
   "feeds": [
     {
-      "source": "https://fnality.com/about-us",
+      "source": "https://fnality.com/about-us/feed/",
       "feed_url": "https://fnality.com/about-us/feed/",
       "title": "",
       "saved": 0,
-      "method": "discovered"
+      "method": "feed"
     },
     {
       "source": "https://fnality.com/news",
@@ -14,8 +14,15 @@
       "title": "",
       "saved": 0,
       "method": "none"
+    },
+    {
+      "source": "https://fnality.com/about-us",
+      "feed_url": "https://fnality.com/about-us/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-08-22T20:20:02Z"
+  "fetched": "2026-08-30T22:33:40Z"
 }
