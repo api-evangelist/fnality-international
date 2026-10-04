@@ -47,7 +47,7 @@ modified: '2026-08-16'
 tags:
 - Company
 - Payments
-- Financial-Services
+- Financial Services
 - Settlement
 - Wholesale Banking
 - Distributed Ledger
@@ -70,6 +70,7 @@ tags_raw:
 - Central Bank Money
 - Liquidity Management
 - Capital Markets
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
